@@ -1,6 +1,105 @@
 body {
-    background-color: 000000;
-}
-section {
+    margin:0%;
+    padding:0%;
+} 
 
+nav {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #9ea2a2;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9ea2a2;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.splash {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.splash h1 {
+  font-family: "Oswald", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #BA0C2F;
+}
+
+.splash img {
+    border: 5px solid;
+    border-radius: 200px;
+    box-shadow: 10px 5px 5px 5px #554f47;
+}
+
+.splash p {
+    display: flex;
+    flex-wrap: wrap;
+    font-family:'Times New Roman', Times, serif;
+    color: #004e60;
+}
+
+section {
+    align-self: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #004e60;
+}
+
+h1 {
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #BA0C2F;
+}
+
+h2 {
+    font-family: "Oswald", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #BA0C2F;
+}
+
+.one-col {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-flow: column wrap;
+}
+
+.newForm {
+    color: #004e60;
+}
+
+label {
+    padding-top: 10px;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+input[type=email]:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+textarea:focus{
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+.three-col {
+    display: grid;
 }
