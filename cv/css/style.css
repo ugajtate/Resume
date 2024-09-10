@@ -123,18 +123,30 @@ dl {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
+    justify-self: center;
+    
 }
 
 .three-col img{
-    max-width: 400px;
-    max-height: 400px;
+    width: 400px;
+    
 }
 
 .card {
-    align-content: center;
+    border: 5px solid #554f47;
+    align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 40%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.card img {
+    display: block;
 }
   
 .card:hover {
@@ -143,6 +155,7 @@ dl {
   
 .container {
     padding: 2px 16px;
+    align-content: center;
 }
 
 .one-col {
