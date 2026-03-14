@@ -1,0 +1,328 @@
+:root {
+    --widthScale: 3440px;
+    --heightScale: 1440px;
+}
+
+@media (max-width: 1920px) and (max-height: 1080px) {
+    :root {
+        --widthScale: 1920px;
+        --heightScale: 1080px;
+    }
+}
+
+@media (max-width: 2560px) and (max-height: 1080px) {
+    :root {
+        --widthScale: 2560px;
+        --heightScale: 1080px;
+    }
+}
+
+@media (max-width: 2560px) and (max-height: 1440px) {
+    :root {
+        --widthScale: 2560px;
+        --heightScale: 1440px;
+    }
+}
+
+@media (max-width: 2560px) and (max-height: 1600px) {
+    :root {
+        --widthScale: 2560px;
+        --heightScale: 1600px;
+    }
+}
+
+@media (max-width: 3840px) and (max-height: 1600px) {
+    :root {
+        --widthScale: 3840px;
+        --heightScale: 1600px;
+    }
+}
+
+@media (max-width: 5120px) and (max-height: 2160px) {
+    :root {
+        --widthScale: 5120px;
+        --heightScale: 2160px;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    background-color: white;
+}
+
+body.dark-mode {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    background-color: black;
+}
+
+
+.navBar {
+    overflow: hidden;
+    background-color:#9EA2A2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBar a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: calc(var(--heightScale) * 0.005) calc(var(--widthScale) * 0.005);
+    text-decoration: none;
+    font-size: calc(var(--widthScale) * 0.005);
+}
+
+.navBar a:hover {
+    background-color: gray;
+    color: black;
+}
+
+.navBar a.active {
+    background-color: #004E60;
+    color: white;
+}
+
+.navBar-theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar.dark-mode {
+    overflow: hidden;
+    background-color:#554F47;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBar a.dark-mode {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: calc(var(--heightScale) * 0.005) calc(var(--widthScale) * 0.005);
+    text-decoration: none;
+    font-size: calc(var(--widthScale) * 0.005);
+}
+
+.navBar a.active.dark-mode {
+    background-color: #C8D8EB;
+    color: black;
+}
+
+#darkModeToggle {
+    background-color: #004E60;
+    color: white;
+    border: none;
+    padding: calc(var(--heightScale) * 0.005) calc(var(--widthScale) * 0.005);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(var(--widthScale) * 0.005);
+    margin: calc(var(--heightScale) * 0.0025) calc(var(--widthScale) * 0.0025);
+    cursor: pointer;
+    border-radius: calc(var(--heightScale) * 0.0025);
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+}
+
+#darkModeToggle.dark-mode {
+    background-color: #C8D8EB;
+    color: black;
+    border: none;
+    padding: calc(var(--heightScale) * 0.005) calc(var(--widthScale) * 0.005);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(var(--widthScale) * 0.005);
+    margin: calc(var(--heightScale) * 0.0025) calc(var(--widthScale) * 0.0025);
+    cursor: pointer;
+    border-radius: calc(var(--heightScale) * 0.0025);
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+}
+
+.navBar .search-container {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar input[type=text] {
+  font-size: calc(var(--widthScale) * 0.0075);
+  border: none;
+}
+
+.navBar .search-container button {
+  float: right;
+  margin-right: calc(var(--widthScale) * 0.0025);
+  background: #ddd;
+  font-size: calc(var(--widthScale) * 0.0075);
+  border: none;
+  cursor: pointer;
+}
+
+.headshot {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(1402px * 0.33);
+    height: calc(1680px * 0.33);
+    border-radius: 50%;
+    border-width: calc(var(--widthScale) * 0.0025);
+    border-style: solid;
+    border-color: black;
+}
+
+.headshot.dark-mode {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(1402px * 0.33);
+    height: calc(1680px * 0.33);
+    border-radius: 50%;
+    border-width: calc(var(--widthScale) * 0.0025);
+    border-style: solid;
+    border-color: white;
+}
+
+.hero {
+    text-align: center;
+    font-family: 'Oswald', serif;
+    font-size: calc(var(--widthScale) * 0.0075);
+    color: black;
+}
+
+.hero h1 {
+    font-size: calc(var(--widthScale) * 0.01);
+}
+
+.hero.dark-mode {
+    text-align: center;
+    font-family: 'Oswald', serif;
+    font-size: calc(var(--widthScale) * 0.0075);
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form label {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.0075);
+    color: black;
+}
+.form input[type="text"] {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.005);
+    color: black;
+    width: calc(var(--widthScale) * 0.05);
+}
+
+.form input[type="email"] {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.005);
+    color: black;
+    width: calc(var(--widthScale) * 0.075);
+}
+
+.form input[type="submit"] {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.005);
+    background-color: #004E60;
+    color: white;
+    width: calc(var(--widthScale) * 0.05);
+    border-radius: calc(var(--widthScale) * 0.0005);
+    cursor: pointer;
+}
+
+.form textarea {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.005);
+    color: black;
+    width: calc(var(--widthScale) * 0.3);
+    height: calc(var(--heightScale) * 0.15);
+}
+
+.form.dark-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form label.dark-mode {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.0075);
+    color: white;
+}
+
+.form input[type="submit"].dark-mode {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.005);
+    background-color: #C8D8EB;
+    color: black;
+    width: calc(var(--widthScale) * 0.05);
+    border-radius: calc(var(--widthScale) * 0.0005);
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: auto;
+    overflow: hidden;
+    background-color: #9EA2A2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.01);
+    color: black;
+}
+
+.footer a {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.01);
+    color: black;
+    text-decoration: none;
+}
+
+.footer.dark-mode {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #554F47;
+}
+
+.footer div.dark-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p.dark-mode {
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.01);
+    color: white;
+}
+
+.footer a.dark-mode{
+    font-family: 'Oswald', 'Merriweather', 'Merriweather Sans', 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--widthScale) * 0.01);
+    color: white;
+    text-decoration: none;
+}
