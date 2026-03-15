@@ -63,29 +63,37 @@ body.dark-mode {
     background-color: black;
 }
 
-
 .navBar {
     overflow: hidden;
     background-color:#9EA2A2;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
+    width: 100%;
 }
 
-.navBar a {
-    display: inline-block;
+.navBar-links {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.navBar-links a {
+    display: block;
     color: black;
     text-align: center;
     padding: calc(var(--heightScale) * 0.005) calc(var(--widthScale) * 0.005);
     text-decoration: none;
-    font-size: calc(var(--widthScale) * 0.005);
+    font-size: calc(var(--widthScale) * 0.007);
+    white-space: nowrap;
 }
 
-.navBar a:hover {
+.navBar-links a:hover {
     background-color: gray;
     color: black;
 }
 
-.navBar a.active {
+.navBar-links a.active {
     background-color: #004E60;
     color: white;
 }
@@ -99,20 +107,23 @@ body.dark-mode {
 .navBar.dark-mode {
     overflow: hidden;
     background-color:#554F47;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
+    width: 100%;
 }
 
-.navBar a.dark-mode {
-    display: inline-block;
+.navBar-links a.dark-mode {
+    display: block;
     color: white;
     text-align: center;
     padding: calc(var(--heightScale) * 0.005) calc(var(--widthScale) * 0.005);
     text-decoration: none;
-    font-size: calc(var(--widthScale) * 0.005);
+    font-size: calc(var(--widthScale) * 0.007);
+    white-space: nowrap;
 }
 
-.navBar a.active.dark-mode {
+.navBar-links a.active.dark-mode {
     background-color: #C8D8EB;
     color: black;
 }
@@ -150,22 +161,36 @@ body.dark-mode {
 .navBar .search-container {
   float: right;
   display: flex;
+  justify-content: right;
+  padding-right: calc(var(--widthScale) * 0.005);
+  align-items: center;
+  white-space: nowrap;
+}
+
+.navBar .search-container form {
+  display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
 
 .navBar input[type=text] {
   font-size: calc(var(--widthScale) * 0.0075);
   border: none;
+  border-top-left-radius: calc(var(--heightScale) * 0.0025);
+  border-bottom-left-radius: calc(var(--heightScale) * 0.0025);
+  white-space: nowrap;
 }
 
 .navBar .search-container button {
   float: right;
-  margin-right: calc(var(--widthScale) * 0.0025);
   background: #ddd;
   font-size: calc(var(--widthScale) * 0.0075);
   border: none;
+  border-top-right-radius: calc(var(--heightScale) * 0.0025);
+  border-bottom-right-radius: calc(var(--heightScale) * 0.0025);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .headshot {
